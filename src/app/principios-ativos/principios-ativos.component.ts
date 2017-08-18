@@ -9,10 +9,14 @@ import { InterageService } from './../interage.service';
 })
 export class PrincipiosAtivosComponent implements OnInit {
 
+  principiosAtivos: any[];
+
   constructor(private interageService: InterageService) { }
 
   ngOnInit() {
-    this.interageService.getPrincipiosAtivos().subscribe( pa => console.log(pa));
+    this.interageService.getPrincipiosAtivos( {"ordering": "id"} ).subscribe( data => {
+      this.principiosAtivos = data.results;
+    });
   }
 
 }
