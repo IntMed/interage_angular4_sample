@@ -6,9 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { InterageService } from './interage.service';
+import { PrincipiosAtivosComponent } from './principios-ativos/principios-ativos.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrincipiosAtivosComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +20,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [InterageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
