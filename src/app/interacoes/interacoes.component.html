@@ -1,3 +1,64 @@
-<p>
-  interacoes works!
-</p>
+<h1>Interações</h1>
+<p class="lead">Página de exemplo sobre interações.</p>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <pre class="card card-block card-header">Adicionar Princípio Ativo</pre>
+      <input [(ngModel)]="asyncSelected"
+             [typeahead]="dataSource"
+             typeaheadOptionsLimit="7"
+             typeaheadOptionField="nome"
+             (typeaheadOnSelect)="principioAtivoSelected($event)"
+             placeholder="Digite o nome do princípio ativo"
+             class="form-control">
+    </div>
+    <br>
+    <div class="row">
+      <table class="table table-striped table-condensed table-bordered">
+        <thead>
+          <tr>
+            <th class="text-center">ID </th>
+            <th class="text-center">NOME </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of principiosAtivos;">
+            <td>{{p.id}}</td>
+            <td>{{p.nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button (click)="clearInteracoes()" class="btn btn-danger pull-left"> Limpar Tabela</button>
+        <button (click)="getInteracoes()" class="btn btn-primary pull-right"> Solicitar Interações</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <table class="table table-striped table-condensed table-bordered">
+        <thead>
+          <tr>
+            <th class="text-center">ID </th>
+            <th class="text-center">PRINCÍPIOS ATIVOS </th>
+            <th class="text-center">GRAVIDADE </th>
+            <th class="text-center">EVIDÊNCIA </th>
+            <th class="text-center">AÇÃO </th>
+            <th class="text-center">EXPLICAÇÃO </th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of interacoes;">
+            <td>{{i.id}}</td>
+            <td>{{i.principios_ativos[0].nome}} + {{i.principios_ativos[1].nome}}</td>
+            <td>{{i.gravidade}}</td>
+            <td>{{i.evidencia}}</td>
+            <td>{{i.acao}}</td>
+            <td>{{i.explicacao}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
