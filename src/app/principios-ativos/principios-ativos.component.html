@@ -1,7 +1,16 @@
 <h1>Princípios Ativos</h1>
 <p class="lead">Página de exemplo sobre princípios ativos.</p>
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-6">
+      <pre class="card card-block card-header">Princípio Ativo: {{asyncSelected | json}}</pre>
+      <input [(ngModel)]="asyncSelected"
+             [typeahead]="dataSource"
+             typeaheadOptionsLimit="7"
+             typeaheadOptionField="nome"
+             placeholder="Digite o nome do princípio ativo"
+             class="form-control">
+  </div>
+  <div class="col-md-6">
     <table class="table table-striped table-condensed table-bordered">
       <thead>
         <tr>

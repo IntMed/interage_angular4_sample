@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { TypeaheadModule } from 'ngx-bootstrap';
+
 import { InterageService } from './interage.service';
 import { PrincipiosAtivosComponent } from './principios-ativos/principios-ativos.component';
 
@@ -18,7 +20,8 @@ import { PrincipiosAtivosComponent } from './principios-ativos/principios-ativos
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TypeaheadModule.forRoot(),
   ],
   providers: [InterageService],
   bootstrap: [AppComponent]
