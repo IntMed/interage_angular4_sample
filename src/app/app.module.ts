@@ -10,11 +10,13 @@ import { TypeaheadModule } from 'ngx-bootstrap';
 
 import { InterageService } from './interage.service';
 import { PrincipiosAtivosComponent } from './principios-ativos/principios-ativos.component';
+import { MedicamentosComponent } from './medicamentos/medicamentos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrincipiosAtivosComponent
+    PrincipiosAtivosComponent,
+    MedicamentosComponent
   ],
   imports: [
     BrowserModule,

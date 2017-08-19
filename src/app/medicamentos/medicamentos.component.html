@@ -1,13 +1,13 @@
-<h1>Princípios Ativos</h1>
-<p class="lead">Página de exemplo sobre princípios ativos.</p>
+<h1>Medicamentos</h1>
+<p class="lead">Página de exemplo sobre medicamentos.</p>
 <div class="row">
   <div class="col-md-4">
-      <pre class="card card-block card-header">Princípio Ativo: {{asyncSelected | json}}</pre>
+      <pre class="card card-block card-header">Medicamento: {{asyncSelected | json}}</pre>
       <input [(ngModel)]="asyncSelected"
              [typeahead]="dataSource"
              typeaheadOptionsLimit="7"
              typeaheadOptionField="nome"
-             placeholder="Digite o nome do princípio ativo"
+             placeholder="Digite o nome do medicamento"
              class="form-control">
   </div>
   <div class="col-md-8">
@@ -16,12 +16,14 @@
         <tr>
           <th class="text-center">ID </th>
           <th class="text-center">NOME </th>
+          <th class="text-center">Princípios Ativos </th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let p of principiosAtivos;">
-          <td>{{p.id}}</td>
-          <td>{{p.nome}}</td>
+        <tr *ngFor="let m of medicamentos;">
+          <td>{{m.id}}</td>
+          <td>{{m.nome}}</td>
+          <td>{{m.principios_ativos_anvisa.toString()}}</td>
         </tr>
       </tbody>
     </table>

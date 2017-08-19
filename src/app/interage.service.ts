@@ -26,4 +26,9 @@ export class InterageService {
     return this.getEndpoint(url, filter);
   }
 
+  getMedicamentos(filter: any = {}) {
+    const url = this.interageApiUrl + 'medicamentos/';
+    return this.getEndpoint(url, filter);
+  }
+
 }
