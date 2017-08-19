@@ -11,12 +11,14 @@ import { TypeaheadModule } from 'ngx-bootstrap';
 import { InterageService } from './interage.service';
 import { PrincipiosAtivosComponent } from './principios-ativos/principios-ativos.component';
 import { MedicamentosComponent } from './medicamentos/medicamentos.component';
+import { ApresentacaoMedicamentosComponent } from './apresentacao-medicamentos/apresentacao-medicamentos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipiosAtivosComponent,
-    MedicamentosComponent
+    MedicamentosComponent,
+    ApresentacaoMedicamentosComponent
   ],
   imports: [
     BrowserModule,

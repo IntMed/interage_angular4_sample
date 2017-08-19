@@ -1,5 +1,5 @@
-<h1>Medicamentos</h1>
-<p class="lead">Página de exemplo sobre medicamentos.</p>
+<h1>Apresentação de Medicamentos</h1>
+<p class="lead">Página de exemplo sobre apresentação de medicamentos.</p>
 <div class="row">
   <div class="col-md-4">
       <pre class="card card-block card-header">Medicamento: {{asyncSelected | json}}</pre>
@@ -16,14 +16,20 @@
         <tr>
           <th class="text-center">ID </th>
           <th class="text-center">NOME </th>
+          <th class="text-center">FORMA FARMACÊUTICA </th>
+          <th class="text-center">CONCENTRAÇÃO </th>
           <th class="text-center">PRINCÍPIOS ATIVOS </th>
+          <th class="text-center">FABRICANTE </th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let m of medicamentos;">
+        <tr *ngFor="let m of apresentacaoMedicamentos;">
           <td>{{m.id}}</td>
           <td>{{m.nome}}</td>
-          <td>{{m.principios_ativos_anvisa.toString()}}</td>
+          <td> {{m.forma_farmaceutica}} </td>
+          <td> {{m.concentracao}} </td>
+          <td>{{m.medicamento.principios_ativos_anvisa.toString()}}</td>
+          <td> {{m.detentor}} </td>
         </tr>
       </tbody>
     </table>
