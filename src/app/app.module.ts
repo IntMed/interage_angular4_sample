@@ -12,13 +12,15 @@ import { InterageService } from './interage.service';
 import { PrincipiosAtivosComponent } from './principios-ativos/principios-ativos.component';
 import { MedicamentosComponent } from './medicamentos/medicamentos.component';
 import { ApresentacaoMedicamentosComponent } from './apresentacao-medicamentos/apresentacao-medicamentos.component';
+import { InteracoesComponent } from './interacoes/interacoes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipiosAtivosComponent,
     MedicamentosComponent,
-    ApresentacaoMedicamentosComponent
+    ApresentacaoMedicamentosComponent,
+    InteracoesComponent
   ],
   imports: [
     BrowserModule,

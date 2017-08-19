@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PrincipiosAtivosComponent } from './principios-ativos/principios-ativos.component';
 import { MedicamentosComponent } from './medicamentos/medicamentos.component';
 import { ApresentacaoMedicamentosComponent } from './apresentacao-medicamentos/apresentacao-medicamentos.component';
+import { InteracoesComponent } from './interacoes/interacoes.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'apresentacao-medicamentos',
     component: ApresentacaoMedicamentosComponent
+  },
+  {
+    path: 'interacoes',
+    component: InteracoesComponent
   }
 ];
 

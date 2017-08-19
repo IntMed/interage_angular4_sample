@@ -36,4 +36,9 @@ export class InterageService {
     return this.getEndpoint(url, filter);
   }
 
+  getInteracoes(filter: any = {}) {
+    const url = this.interageApiUrl + 'interacoes/';
+    return this.getEndpoint(url, filter);
+  }
+
 }
