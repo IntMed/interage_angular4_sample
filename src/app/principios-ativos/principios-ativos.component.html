@@ -1,20 +1,26 @@
 <h1>Princípios Ativos</h1>
-<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML
-  document.</p>
-
-  <p>The .table-striped class adds zebra-stripes to a table:</p>
-
-  <table class="table table-striped table-condensed table-bordered">
-    <thead>
-      <tr>
-        <th>ID </th>
-        <th>NOME </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let p of principiosAtivos;">
-        <td>{{p.id}}</td>
-        <td>{{p.nome}}</td>
-      </tr>
-    </tbody>
-  </table>
+<p class="lead">Página de exemplo sobre princípios ativos.</p>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <table class="table table-striped table-condensed table-bordered">
+      <thead>
+        <tr>
+          <th>ID </th>
+          <th>NOME </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of principiosAtivos;">
+          <td>{{p.id}}</td>
+          <td>{{p.nome}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-md-12">
+        <button [disabled]="!previousUrl" (click)="toPrevious()" class="btn btn-primary pull-left">Anterior</button>
+        <button [disabled]="!nextUrl" (click)="toNext()" class="btn btn-primary pull-right">Próximo</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,9 +16,14 @@ export class InterageService {
     this.headers.append('Authorization', 'Token ' + this.interageAuthToken);
   }
 
-  getPrincipiosAtivos(filter: any = {}) {
+  getEndpoint(url: string, filter: any = {}){
     const options = new RequestOptions({headers: this.headers, params: filter});
-    return this.http.get(this.interageApiUrl + 'principios-ativos/', options).map( (res: Response) => res.json());
+    return this.http.get(url, options).map( (res: Response) => res.json());
+  }
+
+  getPrincipiosAtivos(filter: any = {}) {
+    const url = this.interageApiUrl + 'principios-ativos/';
+    return this.getEndpoint(url, filter);
   }
 
 }
